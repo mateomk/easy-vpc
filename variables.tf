@@ -1,7 +1,19 @@
 variable "aws_region" {
     description = "AWS Region"
     type = string
-    default = "us-west-2"
+    default = "us-east-2"
+}
+
+#variable "vpc_name" {
+#    description = "Name of the VPC"
+#    type = string
+#    default = "us-east-2"  
+#}
+
+variable "source_ip" {
+  description = "My source IP for ssh"
+  type = string
+  default = "63.245.105.214"
 }
 
 variable "vpc_cidr_block" {
@@ -58,23 +70,23 @@ variable "private_subnet_cidr_blocks" {
   ]
 }
 
-variable "resource_tags" {
-  description = "Tags to set for all resources"
-  type        = map(string)
-  default     = {
-    project     = "my-project",
-    environment = "dev"
-  }
-}
+#variable "resource_tags" {
+#  description = "Tags to set for all resources"
+#  type        = map(string)
+#  default     = {
+#    project     = "my-project",
+#    environment = "dev"
+#  }
+#}
 
 variable "ec2_instance_type" {
   description = "AWS EC2 instance type."
   type        = string
-  default     = "t2.micro"
+  default     = "t4g.nano"
 }
 
 variable "ami" {
     description = "AWS EC2 AMI"
     type = string
-    default = "ami-027951e78de46a00e"
+    default = "ami-0e3f5dce8b8d28efd"
 }
