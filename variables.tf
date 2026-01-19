@@ -13,7 +13,7 @@ variable "aws_region" {
 variable "source_ip" {
   description = "My source IP for ssh"
   type = string
-  default = "63.245.105.214"
+  default = "xxx.xxx.xxx.xxx"
 }
 
 variable "vpc_cidr_block" {
