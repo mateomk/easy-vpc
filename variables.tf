@@ -4,12 +4,6 @@ variable "aws_region" {
     default = "us-east-2"
 }
 
-#variable "vpc_name" {
-#    description = "Name of the VPC"
-#    type = string
-#    default = "us-east-2"  
-#}
-
 variable "source_ip" {
   description = "My source IP for ssh"
   type = string
@@ -20,24 +14,6 @@ variable "vpc_cidr_block" {
   description = "CIDR block for VPC"
   type        = string
   default     = "10.0.0.0/16"
-}
-
-variable "instance_count" {
-  description = "Number of instances to provision."
-  type        = number
-  default     = 2
-}
-
-variable "public_subnet_count" {
-  description = "Number of public subnets."
-  type        = number
-  default     = 2
-}
-
-variable "private_subnet_count" {
-  description = "Number of private subnets."
-  type        = number
-  default     = 2
 }
 
 variable "public_subnet_cidr_blocks" {
@@ -68,25 +44,4 @@ variable "private_subnet_cidr_blocks" {
     "10.0.107.0/24",
     "10.0.108.0/24",
   ]
-}
-
-#variable "resource_tags" {
-#  description = "Tags to set for all resources"
-#  type        = map(string)
-#  default     = {
-#    project     = "my-project",
-#    environment = "dev"
-#  }
-#}
-
-variable "ec2_instance_type" {
-  description = "AWS EC2 instance type."
-  type        = string
-  default     = "t4g.nano"
-}
-
-variable "ami" {
-    description = "AWS EC2 AMI"
-    type = string
-    default = "ami-0e3f5dce8b8d28efd"
 }

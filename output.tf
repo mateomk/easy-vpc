@@ -9,3 +9,4 @@ output "environment" {
 output "az_count" {
     value = "${local.availability_zones_count}"
 }
+

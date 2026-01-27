@@ -5,3 +5,10 @@ data "aws_availability_zones" "available" {
         values = ["opt-in-not-required"]
     }
 }
+
+#data "aws_vpc" "default" {
+#    filter {
+#        name = "tag:Name"
+#        values = [upper("VPC-EKS-${local.env}")]
+#   }
+#}
