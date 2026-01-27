@@ -14,6 +14,10 @@ variable "vpc_cidr_block" {
   description = "CIDR block for VPC"
   type        = string
   default     = "10.0.0.0/16"
+  validation {
+    condition = split("/", var.vpc_cidr_block)[1] > 16 && split("/", var.vpc_cidr_block)[1] < 30
+    error_message = "VPC CIDR IS NOT BETWEEN 16 and 24"
+  }
 }
 
 variable "public_subnet_cidr_blocks" {
